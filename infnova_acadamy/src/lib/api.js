@@ -9,11 +9,11 @@ async function handleResponse(response) {
 }
 
 export async function fetchCourses() {
-  const res = await fetch("/api/courses");
+  const res = await fetch("https://infnova-course-api.vercel.app/courses");
   return handleResponse(res);
 }
 
 export async function fetchCourse(id) {
-  const res = await fetch(`/api/courses/${id}`);
+  const res = await fetch(`https://infnova-course-api.vercel.app/courses/${id}`);
   return handleResponse(res);
 }
