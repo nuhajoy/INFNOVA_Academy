@@ -1,19 +1,12 @@
 import { Link, NavLink } from "react-router-dom";
+import logo from "../../assets/logo.png";
 
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-30 bg-white shadow-md">
       <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-full bg-orange-50 text-orange-600 font-semibold text-base">
-            IN
-          </div>
-          <div className="leading-tight">
-            <div className="text-sm font-semibold tracking-wide">INFNOVA</div>
-            <div className="text-[10px] uppercase tracking-widest text-gray-400">
-              Academy
-            </div>
-          </div>
+        <Link to="/" >
+          <img src={logo} alt="INFNOVA Academy Logo" className="h-10 w-20" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-7 text-sm font-medium">
