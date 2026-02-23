@@ -17,7 +17,7 @@ export function CourseCard({ course }) {
     studentsEnrolled,
     students,
     rating,
-    thumbnail, 
+    thumbnail, // ← assuming your data uses "thumbnail" now
   } = course;
 
   const weeksLabel = formatWeeks(durationWeeks || duration);
