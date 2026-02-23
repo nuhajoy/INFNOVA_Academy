@@ -8,23 +8,8 @@ async function handleResponse(response) {
   return response.json();
 }
 
-// const API_BASE = import.meta.env.DEV
-//   ? "/api"
-//   : "https://infnova-course-api.vercel.app";
 
-// export async function fetchCourses() {
-//   const res = await fetch(`${API_BASE}/courses`);
-//   return handleResponse(res);
-// }
-
-// export async function fetchCourse(id) {
-//   const res = await fetch(`${API_BASE}/courses/${id}`);
-//   return handleResponse(res);
-// }
-// api.js
-const API_BASE = import.meta.env.MODE === 'development'
-  ? '/api'                           
-  : import.meta.env.VITE_API_URL || 'https://infnova-course-api.vercel.app';
+const API_BASE = import.meta.env.VITE_API_URL 
 
 export async function fetchCourses() {
   const res = await fetch(`${API_BASE}/courses`);
